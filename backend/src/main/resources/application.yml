@@ -8,7 +8,7 @@ spring:
     name: code-logic-validator-backend
   data:
     mongodb:
-      uri: ${SPRING_DATA_MONGODB_URI:mongodb://localhost:27017/clv_db}
+      uri: ${SPRING_DATA_MONGODB_URI:mongodb+srv://nitheesh25bls_db_user:Nitheesh25bls%40%2B%3D@clv-cluster.5anvqov.mongodb.net/clv_db?retryWrites=true&w=majority}
       auto-index-creation: true
 
 clv:
