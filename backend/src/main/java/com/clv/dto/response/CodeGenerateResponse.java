@@ -1,0 +1,16 @@
+package com.clv.dto.response;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class CodeGenerateResponse {
+    private String language;
+    private String code;
+    private String explanation;
+}

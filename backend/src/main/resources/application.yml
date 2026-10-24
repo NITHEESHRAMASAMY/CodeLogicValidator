@@ -1,0 +1,30 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: code-logic-validator-backend
+  data:
+    mongodb:
+      uri: ${SPRING_DATA_MONGODB_URI:mongodb://localhost:27017/clv_db}
+      auto-index-creation: true
+
+clv:
+  app:
+    jwtSecret: 9a6e23b8807d4b5d2e3f6a8b1c4d9e0f2a4b6c8d1e3f5a7b9c0d2e4f6a8b1c4d
+    jwtExpirationMs: 86400000 # 24 Hours
+    jwtRefreshExpirationMs: 604800000 # 7 Days
+  llm:
+    gemini-api-key: ${GEMINI_API_KEY:}
+    model: ${GEMINI_MODEL:gemini-2.0-flash}
+    timeout-ms: 10000
+
+
+logging:
+  level:
+    root: INFO
+    com.clv: DEBUG
+    org.springframework.security: INFO
+    org.springframework.data.mongodb: INFO
